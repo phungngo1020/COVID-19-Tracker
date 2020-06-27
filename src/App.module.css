@@ -1,0 +1,35 @@
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.App {
+    margin: 0 !important;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+}
+
+.compareCountry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 370px;
+    margin-top: 50px;
+}
+
+@media (max-width: 770px) {
+    .container {
+        margin: 0 10%;
+    }
+
+    .image {
+        width: 100%;
+    }
+}
