@@ -30,6 +30,8 @@ export const fetchDailyData = async () => {
             date: dailyData.reportDate
         }))
 
+        console.log(modifiedData);
+
         return modifiedData;
     } catch (error) {
 
@@ -43,5 +45,34 @@ export const fetchCountries = async () => {
         return countries.map((country) => country.name); // only return name of a country
     } catch (error) {
         console.log(error);
+    }
+}
+
+
+const fetchTodayData = async () => {
+    try {
+        const { data } = await axios.get(url);
+
+        return data;
+    } catch (error) {
+
+    }
+}
+
+export const fetchYesterdayData = async () => {
+    try {
+        const { data } = await axios.get(`${url}/daily`);
+        const yesterdayIncrease = data[data.length-1].confirmed.total - data[data.length-2].confirmed.total;
+        const yesterdayTotal = data[data.length-1].confirmed.total;
+        console.log("Yesterday's cases: " + yesterdayTotal);
+
+        const todaydata = await fetchTodayData();
+        const todayTotal = todaydata.confirmed.value;
+        const todayIncrease = todaydata.confirmed.value-data[data.length-1].confirmed.total
+        console.log("Today's cases: " + todayTotal);
+
+        return [yesterdayIncrease, todayIncrease, yesterdayTotal, todayTotal];
+    } catch (error) {
+
     }
 }
