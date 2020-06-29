@@ -87,17 +87,13 @@ const GlobalCharts = () => {
             }}
             options={{
                 legend: { display: false },
-                title: { display: true, text: 'Monthly New Deaths'}
+                title: { display: true, text: 'Monthly New Deaths' }
             }}
         />
     )
 
     return (
         <div className={styles.container}>
-            <div className={styles.cardHeader}>
-                <h2>Global Stats</h2>
-            </div>
-
             <div className={styles.row}>
                 <div className={styles.chartsContainer}>
                     {weeklyChart}

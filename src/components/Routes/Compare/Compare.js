@@ -20,13 +20,16 @@ class Compare extends React.Component {
                         <Board />
                     </div>
                 </div>
+
+                <p>&nbsp;</p>
                 <div className={styles.Buttons}>
                     <Link to="/">
-                        <button variant="outlined">
+                        <button className={styles.primaryButton}>
                             Home
                         </button>
                     </Link>
                 </div>
+                <p>&nbsp;</p>
 
                 <Footer />
             </div>

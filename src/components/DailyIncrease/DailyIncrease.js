@@ -36,7 +36,7 @@ const DailyIncrease = () => {
     return (
         <div className={styles.container}>
             <div className={styles.cardHeader}>
-                <h2>Global Stats</h2>
+                <h2>Global Status</h2>
             </div>
             <div className={styles.horizontalCard}>
                 <div>

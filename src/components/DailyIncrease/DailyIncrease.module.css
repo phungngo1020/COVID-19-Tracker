@@ -1,6 +1,6 @@
 .container {
     font-family: Arial, Helvetica, sans-serif;
-    width: 80vw;
+    width: 70vw;
     height: auto;
 
     display: flex;
@@ -12,7 +12,7 @@
 }
 
 .horizontalCard {
-    width: 50vw;
+    width: 70vw;
     background-color: white;
     color: black;
     font-size: 15px;
@@ -23,9 +23,9 @@
 }
 
 .cardHeader {
-    width: 50vw;
+    width: 70vw;
     background-color: white;
-    color: black;
+    color: rgb(124, 124, 124);
     font-size: 15px;
     display: flex;
     justify-content: space-around;
@@ -38,3 +38,27 @@
 .total {
     color: #A8C7C3;
 }
+
+@media screen and (max-width: 1050px) {
+    .horizontalCard {
+        width: 100vw;
+    }
+    .cardHeader {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .horizontalCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .horizontalCard {
+        width: 80vw;
+    }
+    .cardHeader {
+        width: 80vw;
+    }
+}
+

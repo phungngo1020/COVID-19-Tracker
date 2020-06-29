@@ -25,13 +25,15 @@ class Home extends React.Component {
                 <DailyIncrease />
                 <GlobalCharts />
 
+                <p>&nbsp;</p>
                 <div className={styles.Buttons}>
                     <Link to="/compare">
-                        <button variant="outlined">
+                        <button className={styles.primaryButton} variant="outlined">
                             Compare two countries
                         </button>
                     </Link>
                 </div>
+                <p>&nbsp;</p>
                 <Footer />
             </div>
         )
