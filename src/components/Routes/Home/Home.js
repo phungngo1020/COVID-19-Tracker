@@ -1,9 +1,10 @@
 import React from 'react';
 
-import Board from '../Board/Board';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import DailyIncrease from '../DailyIncrease/DailyIncrease';
+import Board from '../../Board/Board';
+import Header from '../../Header/Header';
+import Footer from '../../Footer/Footer';
+import DailyIncrease from '../../DailyIncrease/DailyIncrease';
+import GlobalCharts from '../../GlobalCharts/GlobalCharts';
 import styles from './Home.module.css';
 
 
@@ -22,6 +23,7 @@ class Home extends React.Component {
                 </div>
 
                 <DailyIncrease />
+                <GlobalCharts />
 
                 <div className={styles.Buttons}>
                     <Link to="/compare">

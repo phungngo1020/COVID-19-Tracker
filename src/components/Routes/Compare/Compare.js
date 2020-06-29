@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Board from '../Board/Board';
+import Header from '../../Header/Header';
+import Footer from '../../Footer/Footer';
+import Board from '../../Board/Board';
 import styles from './Compare.module.css';
 
 import { Link } from "react-router-dom";

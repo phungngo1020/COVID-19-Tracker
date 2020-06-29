@@ -2,8 +2,7 @@ import React from 'react';
 
 import { Cards, Chart, CountryPicker } from '../';
 import styles from './Board.module.css';
-import { fetchData, fetchYesterdayData } from '../../api';
-import headerImage from '../../images/image.png';
+import { fetchData } from '../../api';
 
 class Board extends React.Component {
 
