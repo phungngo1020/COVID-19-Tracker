@@ -2,4 +2,13 @@
     width: 100vw;
     height: 20vh;
     background-color: #172121;
+
+    color: #ffffff;
+    display: flex;
+    align-items: flex-end;
+}
+
+.initials {
+    font-size: 20px;
+    margin-left: 20px;
 }

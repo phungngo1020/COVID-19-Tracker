@@ -6,10 +6,9 @@ class Footer extends React.Component {
     render() {
         return (
             <div className={styles.footer}>
-                
+                <p className={styles.initials}>p n.</p>
             </div>
         )
-
     }
 }
 
