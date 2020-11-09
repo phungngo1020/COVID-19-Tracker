@@ -1,8 +1,11 @@
 import axios from 'axios';
 
+const fs = require('fs');
+
 const url = 'https://covid19.mathdro.id/api';
 
 export const fetchData = async (country) => {
+    console.log("from FetchData");
     let changeableUrl = url;
 
     if (country) {
@@ -21,21 +24,56 @@ export const fetchData = async (country) => {
 }
 
 export const fetchDailyData = async () => {
-    try {
-        const { data } = await axios.get(`${url}/daily`);
 
-        const modifiedData = data.map((dailyData) => ({
-            confirmed: dailyData.confirmed.total,
-            deaths: dailyData.deaths.total,
-            date: dailyData.reportDate
-        }))
+        console.log("from fetchDailyData");
+        console.log("data");
+        let data = [];
+        data.push({"confirmed": "89251",
+        "deaths": "544",
+        "reportDate": "2020-11-02"});
+        data.push({"confirmed": "89251",
+        "deaths": "544",
+        "reportDate": "2020-11-02"});
+        data.push({"confirmed": "94764",
+        "deaths": "544",
+        "reportDate": "2020-11-03"});
+        //     {"confirmed": "94764",
+        //     "deaths": "544",
+        //     "reportDate": "2020-11-03"},
+        //     {"confirmed": "108480",
+        //     "deaths": "544",
+        //     "reportDate": "2020-11-04"},
+        //     {"confirmed": "123741",
+        //     "deaths": "544",
+        //     "reportDate": "2020-11-05"},
+        //     {"confirmed": "132566",
+        //     "deaths": "544",
+        //     "reportDate": "2020-11-06"},
+        //     {"confirmed": "127894",
+        //     "deaths": "544",
+        //     "reportDate": "2020-11-07"},
+        //     {"confirmed": "109659",
+        //     "deaths": "544",
+        //     "reportDate": "2020-11-08"}
+        // ];
+
+        console.log('data');
+        console.log(data);
+
+        // const { data } = await axios.get(`${url}/countries/USA`);
+
+        const modifiedData = data;
+
+        // const modifiedData = data.map((dailyData) => ({
+        //     confirmed: dailyData.confirmed,
+        //     deaths: dailyData.deaths,
+        //     date: dailyData.reportDate
+        // }))
 
         console.log(modifiedData);
 
         return modifiedData;
-    } catch (error) {
 
-    }
 }
 
 export const fetchCountries = async () => {
@@ -226,3 +264,5 @@ export const fetchMonthlyDeaths = async () => {
         console.log(error);
     }
 }
+
+

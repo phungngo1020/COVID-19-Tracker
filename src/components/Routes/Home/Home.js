@@ -3,8 +3,8 @@ import React from 'react';
 import Board from '../../Board/Board';
 import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
-import DailyIncrease from '../../DailyIncrease/DailyIncrease';
-import GlobalCharts from '../../GlobalCharts/GlobalCharts';
+// import DailyIncrease from '../../DailyIncrease/DailyIncrease';
+// import GlobalCharts from '../../GlobalCharts/GlobalCharts';
 import styles from './Home.module.css';
 
 
@@ -21,9 +21,9 @@ class Home extends React.Component {
                 <div className={styles.board}>
                     <Board />
                 </div>
-
-                <DailyIncrease />
-                <GlobalCharts />
+{/* 
+                <DailyIncrease /> */}
+                {/* <GlobalCharts /> */}
 
                 <p>&nbsp;</p>
                 <div className={styles.Buttons}>
